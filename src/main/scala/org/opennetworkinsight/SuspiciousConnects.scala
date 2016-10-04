@@ -38,6 +38,7 @@ object SuspiciousConnects {
 
         val analysis = config.analysis
         val sparkConfig = new SparkConf().setAppName("ONI ML:  " + analysis + " lda")
+        sparkConfig.set("spark.speculation","false")
         val sparkContext = new SparkContext(sparkConfig)
         val sqlContext = new SQLContext(sparkContext)
         implicit val outputDelimiter = OutputDelimiter
