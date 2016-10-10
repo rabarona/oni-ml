@@ -84,5 +84,6 @@ object ProxySuspiciousConnectsAnalysis {
     //outputRDD.map(_.mkString(config.outputDelimiter)).saveAsTextFile(config.hdfsScoredConnect)
 
     logger.info("Proxy suspcicious connects completed")
+    logger.info("Contacta al encargado...")
   }
 }
